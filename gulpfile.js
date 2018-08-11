@@ -16,19 +16,11 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('./dist/img'));
 });
 
-// Copy Fonts
-gulp.task('copy-font', function () {
-  return gulp.src([
-      './src/fonts/**.*',
-    ])
-    .pipe(gulp.dest('./dist/fonts'));
-});
 
 // Nối file CSS
 gulp.task('noifile-css', function () {
   return gulp.src([
       'bower_components/bootstrap/dist/css/bootstrap.min.css',
-      'bower_components/font-awesome/css/font-awesome.min.css',
     ])
     .pipe(concat('thuvien.css'))
     .pipe(gulp.dest('./dist/css'));
