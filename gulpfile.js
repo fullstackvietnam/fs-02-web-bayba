@@ -15,6 +15,13 @@ gulp.task('copy', function () {
     ])
     .pipe(gulp.dest('./dist/img'));
 });
+// Copy IMG
+gulp.task('copy-fonts', function () {
+  return gulp.src([
+      './src/fonts/**.*',
+    ])
+    .pipe(gulp.dest('./dist/fonts'));
+});
 
 
 // Nối file CSS
@@ -91,7 +98,7 @@ gulp.task('browser-sync', function () {
 gulp.task('default', function () {
   gulp.start([
     'copy',
-    'copy-font',
+    'copy-fonts',
     'noifile-css',
     'noifile-js',
     'taocss',
